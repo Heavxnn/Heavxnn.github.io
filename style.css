@@ -1,0 +1,1172 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    background:
+
+        radial-gradient(
+            circle at top left,
+            #ffd9e5 0%,
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at bottom right,
+            #ffd7b5 0%,
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fff0f5,
+            #ffe5ed,
+            #fff0df
+        );
+
+    color: #6d3b4b;
+
+    min-height: 100vh;
+}
+
+
+
+/* ========================= */
+/* CORAZONES DEL FONDO */
+/* ========================= */
+
+.corazones-fondo {
+
+    position: fixed;
+
+    width: 100%;
+
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 0;
+}
+
+
+.corazones-fondo span {
+
+    position: absolute;
+
+    color: rgba(
+        235,
+        110,
+        145,
+        0.15
+    );
+
+    font-size: 40px;
+
+    animation:
+        flotar
+        8s
+        infinite
+        ease-in-out;
+}
+
+
+.corazones-fondo span:nth-child(1) {
+    left: 10%;
+    top: 20%;
+}
+
+
+.corazones-fondo span:nth-child(2) {
+    left: 30%;
+    top: 70%;
+    animation-delay: 2s;
+}
+
+
+.corazones-fondo span:nth-child(3) {
+    left: 50%;
+    top: 15%;
+    animation-delay: 1s;
+}
+
+
+.corazones-fondo span:nth-child(4) {
+    left: 70%;
+    top: 60%;
+    animation-delay: 3s;
+}
+
+
+.corazones-fondo span:nth-child(5) {
+    left: 90%;
+    top: 25%;
+    animation-delay: 4s;
+}
+
+
+.corazones-fondo span:nth-child(6) {
+    left: 20%;
+    top: 45%;
+    animation-delay: 2s;
+}
+
+
+.corazones-fondo span:nth-child(7) {
+    left: 80%;
+    top: 80%;
+    animation-delay: 1s;
+}
+
+
+@keyframes flotar {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-25px)
+            rotate(10deg);
+
+    }
+}
+
+
+
+/* ========================= */
+/* INICIO */
+/* ========================= */
+
+.inicio {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.inicio-contenido {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.72
+        );
+
+    backdrop-filter: blur(10px);
+
+    padding: 55px 40px;
+
+    border-radius: 35px;
+
+    max-width: 600px;
+
+    width: 100%;
+
+    box-shadow:
+        0 20px 60px
+        rgba(
+            190,
+            90,
+            120,
+            0.18
+        );
+
+    border:
+        2px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.8
+        );
+}
+
+
+.logo-corazon {
+
+    font-size: 55px;
+
+    font-weight: bold;
+
+    color: #b94d70;
+
+    margin-bottom: 15px;
+}
+
+
+.logo-corazon span {
+
+    color: #e87591;
+
+    animation:
+        latido
+        1.5s
+        infinite;
+}
+
+
+@keyframes latido {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.inicio h1 {
+
+    font-size: 42px;
+
+    color: #a84567;
+
+    margin-bottom: 10px;
+}
+
+
+.subtitulo {
+
+    font-size: 25px;
+
+    color: #d46b86;
+
+    margin-bottom: 20px;
+}
+
+
+.frase-inicio {
+
+    font-size: 18px;
+
+    color: #815261;
+
+    margin-bottom: 30px;
+}
+
+
+
+/* ========================= */
+/* BOTONES */
+/* ========================= */
+
+button,
+.boton-musica {
+
+    border: none;
+
+    padding: 14px 24px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e9829d,
+            #d96b87
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    box-shadow:
+        0 7px 18px
+        rgba(
+            200,
+            90,
+            120,
+            0.25
+        );
+}
+
+
+button:hover,
+.boton-musica:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(
+            200,
+            90,
+            120,
+            0.35
+        );
+}
+
+
+
+/* ========================= */
+/* CONTENIDO */
+/* ========================= */
+
+.contenido {
+
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 30px 20px;
+}
+
+
+.oculto {
+    display: none;
+}
+
+
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+header {
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+
+.logo {
+
+    font-size: 35px;
+
+    font-weight: bold;
+
+    color: #b84e70;
+}
+
+
+.logo span {
+    color: #e77794;
+}
+
+
+header h1 {
+
+    font-size: 40px;
+
+    color: #a84567;
+
+    margin: 10px 0;
+}
+
+
+header p {
+
+    font-size: 18px;
+
+    color: #8a5968;
+}
+
+
+
+/* ========================= */
+/* MENÚ */
+/* ========================= */
+
+.menu {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 40px;
+}
+
+
+.menu button {
+
+    font-size: 15px;
+
+    padding: 12px 18px;
+}
+
+
+
+/* ========================= */
+/* SECCIONES */
+/* ========================= */
+
+.seccion {
+
+    display: none;
+
+    animation:
+        aparecer
+        0.6s
+        ease;
+
+    margin-bottom: 50px;
+}
+
+
+.seccion.activa {
+    display: block;
+}
+
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+}
+
+
+.seccion h2 {
+
+    text-align: center;
+
+    color: #ad4c6d;
+
+    font-size: 32px;
+
+    margin-bottom: 25px;
+}
+
+
+.descripcion {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    font-size: 17px;
+}
+
+
+
+/* ========================= */
+/* TARJETAS */
+/* ========================= */
+
+.tarjeta {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.75
+        );
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(
+            190,
+            100,
+            120,
+            0.12
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.8
+        );
+
+    margin-bottom: 25px;
+}
+
+
+.tarjeta h3 {
+
+    text-align: center;
+
+    color: #b44f70;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+}
+
+
+.tarjeta p {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+
+    text-align: center;
+}
+
+
+.corazon-grande {
+
+    text-align: center;
+
+    font-size: 60px;
+
+    margin-top: 20px;
+}
+
+
+
+/* ========================= */
+/* GALERÍA */
+/* ========================= */
+
+.galeria {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(
+                220px,
+                1fr
+            )
+        );
+
+    gap: 18px;
+}
+
+
+.galeria img {
+
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    border:
+        5px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.8
+        );
+
+    box-shadow:
+        0 10px 25px
+        rgba(
+            180,
+            80,
+            110,
+            0.15
+        );
+
+    transition: 0.35s;
+}
+
+
+.galeria img:hover {
+
+    transform:
+        scale(1.03)
+        rotate(1deg);
+
+    box-shadow:
+        0 15px 35px
+        rgba(
+            180,
+            80,
+            110,
+            0.25
+        );
+}
+
+
+
+/* ========================= */
+/* CARTA */
+/* ========================= */
+
+.carta {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffafa,
+            #fff0f5
+        );
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(
+            190,
+            90,
+            120,
+            0.15
+        );
+
+    border:
+        2px solid
+        rgba(
+            235,
+            150,
+            170,
+            0.35
+        );
+
+    line-height: 1.9;
+
+    font-size: 18px;
+
+    position: relative;
+}
+
+
+.carta p {
+    margin-bottom: 22px;
+}
+
+
+.decoracion-carta {
+
+    text-align: center;
+
+    font-size: 45px;
+
+    margin-bottom: 25px;
+}
+
+
+.final-carta {
+
+    text-align: center;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: #b7486b;
+}
+
+
+.firma {
+
+    text-align: right;
+
+    font-style: italic;
+
+    color: #a24d68;
+}
+
+
+
+/* ========================= */
+/* PRIMERAS VECES */
+/* ========================= */
+
+.recuerdos-lista {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+.recuerdo {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.78
+        );
+
+    padding: 28px;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(
+            190,
+            90,
+            120,
+            0.10
+        );
+
+    border-left:
+        6px solid
+        #e985a0;
+
+    transition: 0.3s;
+}
+
+
+.recuerdo:hover {
+
+    transform:
+        translateX(5px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(
+            190,
+            90,
+            120,
+            0.18
+        );
+}
+
+
+.recuerdo h3 {
+
+    color: #ad4c6d;
+
+    margin-bottom: 12px;
+
+    font-size: 21px;
+}
+
+
+.recuerdo p {
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+
+
+/* ========================= */
+/* MÚSICA */
+/* ========================= */
+
+.musica {
+    text-align: center;
+}
+
+
+.nota-musical {
+
+    font-size: 65px;
+
+    margin-bottom: 15px;
+}
+
+
+.boton-musica {
+    margin-top: 15px;
+}
+
+
+
+/* ========================= */
+/* FUTURO */
+/* ========================= */
+
+.futuro-contenido {
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(
+                255,
+                238,
+                245,
+                0.9
+            ),
+            rgba(
+                255,
+                241,
+                222,
+                0.9
+            )
+        );
+
+    padding: 50px 30px;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(
+            190,
+            100,
+            120,
+            0.14
+        );
+}
+
+
+.pareja-boda {
+
+    font-size: 75px;
+
+    margin-bottom: 25px;
+}
+
+
+.futuro-contenido h3 {
+
+    color: #ae4d6d;
+
+    font-size: 27px;
+
+    margin: 20px 0;
+}
+
+
+.futuro-contenido p {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin: 12px 0;
+}
+
+
+.anillos {
+
+    font-size: 55px;
+
+    margin: 25px 0;
+}
+
+
+.futuro-contenido .boton-final {
+
+    margin-top: 25px;
+}
+
+
+
+/* ========================= */
+/* FINAL */
+/* ========================= */
+
+.final {
+
+    text-align: center;
+
+    padding: 70px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(
+                255,
+                221,
+                232,
+                0.9
+            ),
+            rgba(
+                255,
+                235,
+                211,
+                0.9
+            )
+        );
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(
+            190,
+            90,
+            120,
+            0.18
+        );
+}
+
+
+.pareja-final {
+
+    font-size: 75px;
+
+    margin-bottom: 20px;
+}
+
+
+.final h2 {
+
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+
+.frase-final {
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #a74667;
+
+    margin-bottom: 25px;
+}
+
+
+.final > p:not(.frase-final) {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+.final h3 {
+
+    font-size: 25px;
+
+    color: #a84b69;
+
+    margin: 30px 0;
+}
+
+
+.boton-final {
+
+    font-size: 22px;
+
+    padding: 17px 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e87896,
+            #d85f7e
+        );
+}
+
+
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    color: #8d5969;
+
+    font-size: 15px;
+}
+
+
+footer p {
+    margin: 8px;
+}
+
+
+
+/* ========================= */
+/* CORAZONES FINALES */
+/* ========================= */
+
+.corazon-caida {
+
+    position: fixed;
+
+    top: -50px;
+
+    font-size: 30px;
+
+    z-index: 9999;
+
+    pointer-events: none;
+
+    animation:
+        caer
+        4s
+        linear
+        forwards;
+}
+
+
+@keyframes caer {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+
+        opacity: 0;
+
+    }
+}
+
+
+
+/* ========================= */
+/* CELULAR */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+    .inicio-contenido {
+
+        padding:
+            40px
+            25px;
+
+    }
+
+
+    .inicio h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    header h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    .menu button {
+
+        width: 100%;
+
+    }
+
+
+    .carta {
+
+        padding: 25px;
+
+        font-size: 16px;
+
+    }
+
+
+    .galeria {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .galeria img {
+
+        height: 280px;
+
+    }
+
+
+    .pareja-boda,
+    .pareja-final {
+
+        font-size: 55px;
+
+    }
+
+}
